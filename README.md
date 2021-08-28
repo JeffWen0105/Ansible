@@ -1,10 +1,12 @@
 
+
+
 #### 要練習 Ansible 並控制多臺機器(叢集)的環境，一般透過 VM 虛擬機來模擬多台機器，不過缺點是如果沒有一台資源（CPU、RAM）較多的電腦很難達成，且執行速度相對慢很多，那如果想要練習又不想額外花錢買好的電腦去練習怎麼辦呢？
 
 #### 好佳在 HowHowWen 幫你打造了客制化 container （ 模擬 RH294 紅帽課程練習環境 )， 可以快速創建環境、重置環境及一口氣控制 7 台叢集機器（ 1 Cores， 1G 機器都可以使用)，還不快手刀來使用  ~~
 
 
-### 基本要求
+### 基本要求:
 
 
 ```
@@ -17,20 +19,21 @@
 * [Docker 介紹及安裝請點我](https://jeffwen0105.com/dokcer-%e8%b2%a8%e6%ab%83%e5%ae%b9%e5%99%a8%e5%85%a9%e4%b8%89%e4%ba%8b/) ～～
 
 
-### 操作方式
+### 操作方式:
 
 ```
 1. 下載下方 Docker-compose.yml，並存放置任意資料夾( lab_example )
 2. 執行 docker-compose up -d ， 確認叢集均正常啟動
 3. 執行 ssh  student@10.10.10.10 (密碼： redhat ) ，登入 workstation 機器
-4. 至 /home/student/playground 下目錄有課程範例，可自行解壓縮來使用。
+4.  /home/student/playground/labs 下目錄有課程範例。
+5.  /home/student/playground/example 目錄下有配置好所有機器的inventory及ansible.cfg，可以做驗證測試。
 ps.  請務必在 /home/student/playground 下的子目錄執行，否則停止叢集，將重置資料。
 ```
 
 [Docker-compose.yml 下載請點我](https://jeffwen0105.github.io/Ansible/init/docker-compose.yml)
 
 
-### 進階操作
+### 進階操作:
 
 ```
 1. 可以透過下方 howhowwen 寫的 reset 腳本指定特定機器重置
@@ -45,7 +48,7 @@ ps.  如全部機器都要重置，請直接執行 docker-compose down && docker
 [reset.sh 腳本下載請點我](https://jeffwen0105.github.io/Ansible/init/reset.sh)
 
 
-### 客制化自己的執行環境
+### 客制化自己的執行環境:
 
 ```
 0. howhowwen 盡可能打造與虛擬機相同環境：
@@ -55,7 +58,14 @@ ps.  如全部機器都要重置，請直接執行 docker-compose down && docker
 
 [Dockerfile 下載請點我](https://jeffwen0105.github.io/Ansible/init/Dockerfile)
 
-### 示範DEMO
+
+### 開放原始碼:
+
+[GitHub 請點我 ..](https://github.com/JeffWen0105/Ansible)
+
+[DockerHub 請點我 ..](https://hub.docker.com/r/jeffwen0105/ansible_server)
+
+### 示範DEMO:
 
 0. 測試機器規格
 
@@ -76,7 +86,9 @@ ps.  如全部機器都要重置，請直接執行 docker-compose down && docker
 ![](https://i.imgur.com/CEeB2mk.png)
 
 4. 至 /home/student/playground/example 內使用 Ansible 測試所有機器狀態
+
 * ```ansible all -m ping```
+
 ![](https://i.imgur.com/HL06U61.png)
 
 5. 重置 serverb 及 serverc 機器
@@ -90,7 +102,7 @@ ps.  如全部機器都要重置，請直接執行 docker-compose down && docker
 
 
 
-### 操作上限制
+### 操作上限制:
 
 ```
 0. 囿於是容器化技術，故與虛擬機擁有實際OS還是有些區別
