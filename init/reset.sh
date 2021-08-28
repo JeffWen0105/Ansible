@@ -42,13 +42,13 @@ function stop_node() {
 }
 
 function rm_node() {
-  docker-compose rm -f 1>/dev/null
+  docker-compose rm -f 2>/dev/null
   [[ "$?" != "0" ]] && exit_exception '程序錯誤!!!! 請檢查 docker-compose.yml 檔案是否存在及內容是否正確 ...'
   restart_node
 }
 
 function restart_node() {
-  docker-compose up -d 1>/dev/null
+  docker-compose up -d 2>/dev/null
   [[ "$?" != "0" ]] && exit_exceptiou '程序錯誤!!!! 請檢查 docker-compose.yml 檔案是否存在及內容是否正確 ...'
   log_info "機器重置執行完畢，且完成開機"
 }
