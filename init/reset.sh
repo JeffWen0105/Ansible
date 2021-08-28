@@ -2,6 +2,11 @@
 
 #  powered by howhowwen
 
+if [ "$1" == "-h" ]; then
+  echo "\nHelp:  請輸入要重置的機器名稱，重置多台機器使用空白隔開 ..\n"
+  exit 0
+fi
+
 getLists=$@
 
 function log_info() {
@@ -47,6 +52,9 @@ function restart_node() {
   [[ "$?" != "0" ]] && exit_exceptiou '程序錯誤!!!! 請檢查 docker-compose.yml 檔案是否存在及內容是否正確 ...'
   log_info "機器重置執行完畢，且完成開機"
 }
+
+
+
 
 docker_check
 stop_node
