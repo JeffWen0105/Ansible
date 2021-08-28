@@ -3,7 +3,7 @@ version: '2.2'
 services:
 
   workstation:
-    image: jeffwen0105/ansible_server:0.1
+    image: jeffwen0105/ansible_server:0.2
     hostname: workstation      
     privileged: true
     command: ['/sbin/init']
@@ -23,7 +23,7 @@ services:
         ipv4_address: 10.10.10.10   
 
   servera:
-    image: jeffwen0105/ansible_server:0.1
+    image: jeffwen0105/ansible_server:0.2
     hostname: servera
     privileged: true
     command: ['/sbin/init']
@@ -41,7 +41,7 @@ services:
         ipv4_address: 10.10.10.11    
 
   serverb:
-    image: jeffwen0105/ansible_server:0.1
+    image: jeffwen0105/ansible_server:0.2
     hostname: serverb
     privileged: true
     command: ['/sbin/init']
@@ -59,7 +59,7 @@ services:
         ipv4_address: 10.10.10.12    
 
   serverc:
-    image: jeffwen0105/ansible_server:0.1
+    image: jeffwen0105/ansible_server:0.2
     hostname: serverc  
     privileged: true
     command: ['/sbin/init']
@@ -77,7 +77,7 @@ services:
         ipv4_address: 10.10.10.13
 
   serverd:
-    image: jeffwen0105/ansible_server:0.1
+    image: jeffwen0105/ansible_server:0.2
     hostname: serverd
     privileged: true
     command: ['/sbin/init']
@@ -95,7 +95,7 @@ services:
         ipv4_address: 10.10.10.14
 
   servere:
-    image: jeffwen0105/ansible_server:0.1
+    image: jeffwen0105/ansible_server:0.2
     hostname: servere
     privileged: true
     command: ['/sbin/init']
@@ -113,7 +113,7 @@ services:
         ipv4_address: 10.10.10.15
 
   serverf:
-    image: jeffwen0105/ansible_server:0.1
+    image: jeffwen0105/ansible_server:0.2
     hostname: serverf
     privileged: true
     command: ['/sbin/init']
@@ -131,7 +131,7 @@ services:
         ipv4_address: 10.10.10.16
 
   serverg:
-    image: jeffwen0105/ansible_server:0.1
+    image: jeffwen0105/ansible_server:0.2
     hostname: serverg
     privileged: true
     command: ['/sbin/init']
