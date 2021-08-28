@@ -27,9 +27,9 @@ function docker_check() {
 }
 
 function stop_node() {
-  [[ -z "$getLists" ]] && exit_exception '至少輸入一臺機器...'
+  [[ -z "$getLists" ]] && exit_exception '至少輸入一臺機器 ...'
   for node in ${getLists[@]}; do
-    log_info "執行 $node 機器重置，請稍等 .."
+    log_info "執行 $node 機器重置，請稍等 ..."
     docker-compose stop $node 1>/dev/null
     [[ "$?" != "0" ]] && exit_exception '程序錯誤!!!! 請檢查 docker-compose.yml 檔案是否存在及內容是否正確 ...'
   done
@@ -45,7 +45,7 @@ function rm_node() {
 function restart_node() {
   docker-compose up -d 1>/dev/null
   [[ "$?" != "0" ]] && exit_exceptiou '程序錯誤!!!! 請檢查 docker-compose.yml 檔案是否存在及內容是否正確 ...'
-  log_info "機器重置執行完畢"
+  log_info "機器重置執行完畢，且完成開機"
 }
 
 docker_check
