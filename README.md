@@ -112,9 +112,8 @@ ps.  如全部機器都要重置，請直接執行 docker-compose down && docker
 
 ---
 
-<center>
+
 
 [![](https://i.imgur.com/sgdmN00.png)](https://buymeacoffee.com/jeffwen0105)
 如果覺得內容還不錯，請我喝杯咖啡吧～
 
-</center>
