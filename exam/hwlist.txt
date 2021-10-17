@@ -3,6 +3,5 @@ Memory= memory_in_MB
 BIOS= BIOS_version
 vda_size= XX
 vdb_size= XX
-vdc_size= XX
-vdd_size= XX
+
 
