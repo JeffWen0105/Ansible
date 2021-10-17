@@ -113,16 +113,9 @@ ps.  如全部機器都要重置，請直接執行 docker-compose down && docker
 ---
 
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 2f9b463dbfcca7b91e6bdf451c77962e377bb344
 
 [![](https://i.imgur.com/sgdmN00.png)](https://buymeacoffee.com/jeffwen0105)
 如果覺得內容還不錯，請我喝杯咖啡吧～
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 2f9b463dbfcca7b91e6bdf451c77962e377bb344
