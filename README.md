@@ -24,7 +24,8 @@
 ```
 1. 下載下方 Docker-compose.yml，並存放置任意資料夾( lab_example )
 2. 執行 docker-compose up -d ， 確認叢集均正常啟動
-3. 執行 ssh  student@10.10.10.10 (密碼： redhat ) ，登入 workstation 機器
+~~3. 執行 ssh  student@10.10.10.10 (密碼： redhat ) ，登入 workstation 機器~~
+3.  新登入方式，使用 start.sh 腳本，快速登入 workstation 機器。
 4.  /home/student/playground/labs 下目錄有課程範例。
 5.  /home/student/playground/example 目錄下有配置好所有機器的inventory及ansible.cfg，可以做驗證測試。
 ps.  請務必在 /home/student/playground 下的子目錄執行，否則停止叢集，將重置資料。
@@ -32,6 +33,7 @@ ps.  請務必在 /home/student/playground 下的子目錄執行，否則停止�
 
 [Docker-compose.yml 下載請點我](https://jeffwen0105.github.io/Ansible/init/docker-compose.yml)
 
+[start.sh 下載請點我](https://jeffwen0105.github.io/Ansible/init/start.sh)
 
 ### 進階操作:
 
