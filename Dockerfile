@@ -2,7 +2,7 @@ FROM rockylinux:8.5
 
 LABEL maintainer="howhowwen <wen9077@gmail.com>"
 LABEL maintainer="website : https://jeffwen0105.com/"
-RUN yum install -y vim  net-tools telnet sudo passwd  openssh-* python3-dev* curl wget bash-completion openssl epel-release git
+RUN yum install -y vim  net-tools telnet sudo passwd  openssh-* python3-dev* curl wget bash-completion openssl epel-release 
 RUN yum install ansible -y && yum clean all && rm -fr /var/cache 
 RUN ssh-keygen -A
 # RUN sed 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config > /etc/ssh/sshd_config
@@ -21,8 +21,6 @@ RUN cat ~/.ssh/id_rsa.pub >  ~/.ssh/authorized_keys
 USER student
 RUN ssh-keygen -q  -N  "" -f ~/.ssh/id_rsa
 RUN cat ~/.ssh/id_rsa.pub >  ~/.ssh/authorized_keys  && mkdir -p ~/playground
-RUN git clone --depth=1 https://github.com/Bash-it/bash-it.git /home/student/.bash_it
-RUN /home/student/.bash_it/install.sh
 RUN echo -e 'autocmd FileType yaml setlocal ai nu ts=2 sw=2 et\n:set cursorcolumn' > /home/student/.vimrc
 COPY src/example.tar.gz  /tmp/.
 # COPY src/labs.tar.gz /tmp/.
