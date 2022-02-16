@@ -2,7 +2,7 @@ FROM fedora:28
 
 LABEL maintainer="howhowwen <wen9077@gmail.com>"
 LABEL maintainer="website : https://jeffwen0105.com/"
-RUN dnf install -y vim  net-tools telnet sudo passwd  openssh-* python3-dev* curl wget bash-completion openssl git iprout
+RUN dnf install -y vim  net-tools telnet sudo passwd  openssh-* python3-dev* curl wget bash-completion openssl git iproute
 RUN dnf install ansible -y && dnf clean all && rm -fr /var/cache 
 RUN ssh-keygen -A
 # RUN sed 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config > /etc/ssh/sshd_config
