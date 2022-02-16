@@ -30,7 +30,7 @@ USER root
 RUN echo -e  "Host * \n \tStrictHostKeyChecking no" >> /etc/ssh/ssh_config
 RUN cat /home/student/.ssh/id_rsa.pub >>  /home/devops/.ssh/authorized_keys && cat /home/devops/.ssh/id_rsa.pub >>  /home/student/.ssh/authorized_keys
 RUN chown -R student:student /home/student/ && chown -R devops:devops /home/devops
-RUN echo "alias ll='ls -la' >> /etc/profile.d/ll.sh"
+RUN echo "alias ll='ls -la'" >> /etc/profile.d/ll.sh
 RUN rm -fr /etc/yum.repos.d/*
 WORKDIR /home/student/playground/example/
 EXPOSE 22
