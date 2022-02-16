@@ -1,4 +1,4 @@
-FROM rockylinux:8.5
+FROM fedora:28
 
 LABEL maintainer="howhowwen <wen9077@gmail.com>"
 LABEL maintainer="website : https://jeffwen0105.com/"
