@@ -3,7 +3,7 @@ version: '2.2'
 services:
 
   workstation:
-    image: jeffwen0105/ansible_server:0.2
+    image: jeffwen0105/ansible_server:0.3
     hostname: workstation      
     privileged: true
     command: ['/sbin/init']
@@ -15,15 +15,12 @@ services:
       - "serverb.lab.example.com:10.10.10.12"
       - "serverc.lab.example.com:10.10.10.13"
       - "serverd.lab.example.com:10.10.10.14"
-      - "servere.lab.example.com:10.10.10.15"
-      - "serverf.lab.example.com:10.10.10.16"
-      - "serverg.lab.example.com:10.10.10.17"
     networks:
       ansible:
         ipv4_address: 10.10.10.10   
 
   servera:
-    image: jeffwen0105/ansible_server:0.2
+    image: jeffwen0105/ansible_server:0.3
     hostname: servera
     privileged: true
     command: ['/sbin/init']
@@ -33,15 +30,12 @@ services:
       - "serverb.lab.example.com:10.10.10.12"
       - "serverc.lab.example.com:10.10.10.13"
       - "serverd.lab.example.com:10.10.10.14"
-      - "servere.lab.example.com:10.10.10.15"
-      - "serverf.lab.example.com:10.10.10.16"
-      - "serverg.lab.example.com:10.10.10.17"
     networks:
       ansible:
         ipv4_address: 10.10.10.11    
 
   serverb:
-    image: jeffwen0105/ansible_server:0.2
+    image: jeffwen0105/ansible_server:0.3
     hostname: serverb
     privileged: true
     command: ['/sbin/init']
@@ -51,15 +45,12 @@ services:
       - "serverb.lab.example.com:10.10.10.12"
       - "serverc.lab.example.com:10.10.10.13"
       - "serverd.lab.example.com:10.10.10.14"
-      - "servere.lab.example.com:10.10.10.15"
-      - "serverf.lab.example.com:10.10.10.16"
-      - "serverg.lab.example.com:10.10.10.17"
     networks:
       ansible:
         ipv4_address: 10.10.10.12    
 
   serverc:
-    image: jeffwen0105/ansible_server:0.2
+    image: jeffwen0105/ansible_server:0.3
     hostname: serverc  
     privileged: true
     command: ['/sbin/init']
@@ -69,15 +60,12 @@ services:
       - "serverb.lab.example.com:10.10.10.12"
       - "serverc.lab.example.com:10.10.10.13"
       - "serverd.lab.example.com:10.10.10.14"
-      - "servere.lab.example.com:10.10.10.15"
-      - "serverf.lab.example.com:10.10.10.16"
-      - "serverg.lab.example.com:10.10.10.17"
     networks:
       ansible:
         ipv4_address: 10.10.10.13
 
   serverd:
-    image: jeffwen0105/ansible_server:0.2
+    image: jeffwen0105/ansible_server:0.3
     hostname: serverd
     privileged: true
     command: ['/sbin/init']
@@ -87,66 +75,9 @@ services:
       - "serverb.lab.example.com:10.10.10.12"
       - "serverc.lab.example.com:10.10.10.13"
       - "serverd.lab.example.com:10.10.10.14"
-      - "servere.lab.example.com:10.10.10.15"
-      - "serverf.lab.example.com:10.10.10.16"
-      - "serverg.lab.example.com:10.10.10.17"
     networks:
       ansible:
         ipv4_address: 10.10.10.14
-
-  servere:
-    image: jeffwen0105/ansible_server:0.2
-    hostname: servere
-    privileged: true
-    command: ['/sbin/init']
-    extra_hosts:
-      - "workstation.lab.example.com:10.10.10.10"
-      - "servera.lab.example.com:10.10.10.11"
-      - "serverb.lab.example.com:10.10.10.12"
-      - "serverc.lab.example.com:10.10.10.13"
-      - "serverd.lab.example.com:10.10.10.14"
-      - "servere.lab.example.com:10.10.10.15"
-      - "serverf.lab.example.com:10.10.10.16"
-      - "serverg.lab.example.com:10.10.10.17"
-    networks:
-      ansible:
-        ipv4_address: 10.10.10.15
-
-  serverf:
-    image: jeffwen0105/ansible_server:0.2
-    hostname: serverf
-    privileged: true
-    command: ['/sbin/init']
-    extra_hosts:
-      - "workstation.lab.example.com:10.10.10.10"
-      - "servera.lab.example.com:10.10.10.11"
-      - "serverb.lab.example.com:10.10.10.12"
-      - "serverc.lab.example.com:10.10.10.13"
-      - "serverd.lab.example.com:10.10.10.14"
-      - "servere.lab.example.com:10.10.10.15"
-      - "serverf.lab.example.com:10.10.10.16"
-      - "serverg.lab.example.com:10.10.10.17"
-    networks:
-      ansible:
-        ipv4_address: 10.10.10.16
-
-  serverg:
-    image: jeffwen0105/ansible_server:0.2
-    hostname: serverg
-    privileged: true
-    command: ['/sbin/init']
-    extra_hosts:
-      - "workstation.lab.example.com:10.10.10.10"
-      - "servera.lab.example.com:10.10.10.11"
-      - "serverb.lab.example.com:10.10.10.12"
-      - "serverc.lab.example.com:10.10.10.13"
-      - "serverd.lab.example.com:10.10.10.14"
-      - "servere.lab.example.com:10.10.10.15"
-      - "serverf.lab.example.com:10.10.10.16"
-      - "serverg.lab.example.com:10.10.10.17"
-    networks:
-      ansible:
-        ipv4_address: 10.10.10.17
 
 networks:
   ansible:
