@@ -1,0 +1,16 @@
+---
+- name:  play to set up  web server
+  hosts: 
+    - servera.lab.example.com
+    - serverb.lab.example.com
+  tasks:
+    - name: httpd & php installed
+      yum:
+        name: 
+          - httpd
+          - php
+        state: present
+        
+    - name: create an user
+      user:
+        name: lab01
